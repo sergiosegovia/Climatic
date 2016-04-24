@@ -1,0 +1,16 @@
+<ion-view title="{{location.city}}" id="page2" style="background-color:#81D3D4;">
+    <ion-content padding="true" class="has-header">
+        <h4 id="climaticPronStico-heading2" style="color:#6E6E6E;">Pronóstico para {{location.city}}</h4>
+        <div>
+            <div>
+                Días: 2 | 5 | 7
+                {{wheaterResult.city.name}}
+                {{wheaterResult.cnt}}
+            </div>
+        </div>
+        <div ng-repeat="w in wheaterResult.list">
+          <wheater-report wheater-city='w'></wheater-report>
+        </div>
+        <a ui-sref="home" id="climaticPronStico-button5" style="color:#FFFFFF;text-align:right;" class="button button-calm  button-block button-clear">Volver al inicio</a>
+    </ion-content>
+</ion-view>
